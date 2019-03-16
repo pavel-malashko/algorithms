@@ -66,3 +66,37 @@ var twoSum = function(nums, target) {
     }
 };
 ```
+### 7. Reverse Integer
+
+https://leetcode.com/problems/two-sum/submissions/
+
+**Given a 32-bit signed integer, reverse digits of an integer.**
+
+#### Example 1:
+Input: 123
+Output: 321
+
+#### Example 2:
+Input: -123
+Output: -321
+
+#### Example 3:
+Input: 120
+Output: 21
+
+ #### Solution: 
+```javascript
+/**
+ * @param {number} x
+ * @return {number}
+ */
+var reverse = function(x) {
+    let sign = x;
+    let maxInteger = 2147483647;
+       if(sign >= 0 ) sign = "";             
+       else sign = "-";
+    x = (sign + Math.abs(x).toString().split("").reverse().join(""));
+    return (x <= maxInteger && x >= -maxInteger) ? x : 0;
+};
+```
+
