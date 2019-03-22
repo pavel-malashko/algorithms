@@ -99,4 +99,33 @@ var reverse = function(x) {
     return (x <= maxInteger && x >= -maxInteger) ? x : 0;
 };
 ```
+### 27. Remove Element
 
+https://leetcode.com/problems/remove-element/
+
+**Given an array nums and a value val, remove all instances of that value in-place and return the new length.**
+
+#### Example 1:
+
+Given nums = [3,2,2,3], val = 3,
+
+Your function should return length = 2, with the first two elements of nums being 2.
+
+It doesn't matter what you leave beyond the returned length.
+
+```javascript
+/**
+ * @param {number[]} nums
+ * @param {number} val
+ * @return {number}
+ */
+var removeElement = function(nums, val) {
+    for(let i = 0; i < nums.length; i++){
+        if(nums[i] === val) {
+            nums.splice(i,1); 
+            i--
+        }              
+    }
+    return nums.length;
+};
+```
